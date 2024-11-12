@@ -35,5 +35,9 @@
   "Notes/Radio Astronomy": "LiRadio",
   "Notes/Planetary Systems": "LiMoonStar",
   "Notes/Exploration of Polar Areas": "LiSnowflake",
-  "Notes/Advanced Mechanics": "LiSquareRadical"
+  "Notes/Advanced Mechanics": "LiSquareRadical",
+  "Radio Astronomy": "LiRadio",
+  "Planetary Systems": "LiMoonStar",
+  "Exploration of Polar Areas": "LiSnowflake",
+  "Advanced Mechanics": "LiSquareRadical"
 }
