@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Radio Astronomy/1. Introduction.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
@@ -165,6 +165,7 @@
   },
   "active": "d4285c92021ef754",
   "lastOpenFiles": [
+    "Pasted image 20241112225702.png",
     "Notes/Advanced Mechanics/1. Variational Calculus.md",
     "Notes/Radio Astronomy/1. Introduction.md",
     "Notes/Advanced Mechanics/2. Lagrangian Mechanics.md",
