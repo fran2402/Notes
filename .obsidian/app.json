@@ -9,5 +9,6 @@
   },
   "spellcheck": false,
   "showLineNumber": false,
-  "vimMode": true
+  "vimMode": true,
+  "promptDelete": false
 }

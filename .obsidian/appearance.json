@@ -8,5 +8,8 @@
   "baseFontSize": 19,
   "baseFontSizeAction": true,
   "showViewHeader": true,
-  "nativeMenus": false
+  "nativeMenus": false,
+  "enabledCssSnippets": [
+    "imageinvert"
+  ]
 }

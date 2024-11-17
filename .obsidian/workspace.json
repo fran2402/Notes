@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Exploration of Polar Areas/Lecture II - Mining.md",
-                "mode": "source",
+                "file": "Radio Astronomy/2. Radiation Fundamentals.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lecture II - Mining"
+              "title": "2. Radiation Fundamentals"
             }
           }
         ]
@@ -138,10 +138,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Exploration of Polar Areas/Lecture II - Mining.md"
+                "file": "Radio Astronomy/2. Radiation Fundamentals.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of Lecture II - Mining"
+              "title": "Outline of 2. Radiation Fundamentals"
             }
           }
         ]
@@ -165,11 +165,21 @@
   },
   "active": "a0d03228d137db1a",
   "lastOpenFiles": [
+    "Radio Astronomy/1. Introduction.md",
+    "Radio Astronomy/2. Radiation Fundamentals.md",
+    "Radio Astronomy/Images/Pasted image 20241117161338.png",
+    "Radio Astronomy/Images/Pasted image 20241117161228.png",
+    "Radio Astronomy/Images/Pasted image 20241117161034.png",
+    "Radio Astronomy/Images/Pasted image 20241117160703.png",
+    "Radio Astronomy/Images/Pasted image 20241117160158.png",
+    "Radio Astronomy/Images/Pasted image 20241117155250.png",
+    "Radio Astronomy/Images/Pasted image 20241117155330.png",
+    "Radio Astronomy/Images/Pasted image 20241117155120.png",
+    "Radio Astronomy/Images",
+    "Pasted image 20241117145921.png",
     "Exploration of Polar Areas/Lecture I - Arctic Council.md",
     "Exploration of Polar Areas/Lecture II - Mining.md",
-    "Radio Astronomy/2. Radiation Fundamentals.md",
     "Advanced Mechanics/2. Lagrangian Mechanics.md",
-    "Radio Astronomy/1. Introduction.md",
     "Advanced Mechanics/1. Variational Calculus.md",
     "Planetary Systems/Magnetospheres.md",
     "Pasted image 20241112225702.png",
