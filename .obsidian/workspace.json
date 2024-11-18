@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Advanced Mechanics/2. Lagrangian Mechanics.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
@@ -163,8 +163,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "271eca2e444e6126",
+  "active": "792e78622b931d2e",
   "lastOpenFiles": [
+    "Euler's equation.md",
+    "Advanced Mechanics/2. Lagrangian Mechanics.md",
     "Advanced Mechanics/1. Variational Calculus.md",
     "Exploration of Polar Areas/Lecture II - Mining.md",
     "Exploration of Polar Areas/Lecture I - Arctic Council.md",
@@ -174,7 +176,6 @@
     "Radio Astronomy/Images/Pasted image 20241117161228.png",
     "Radio Astronomy/Images/Pasted image 20241117161034.png",
     "Radio Astronomy/Images/Pasted image 20241117160158.png",
-    "Advanced Mechanics/2. Lagrangian Mechanics.md",
     "Radio Astronomy/Images/Pasted image 20241117161651.png",
     "Radio Astronomy/Images/Pasted image 20241117160703.png",
     "Radio Astronomy/Images/Pasted image 20241117155250.png",
