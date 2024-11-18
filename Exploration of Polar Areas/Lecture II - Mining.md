@@ -49,3 +49,4 @@
 	- Little coal resources in Nordic countries
 	- National prestige and strategies of foreign policy a 
 - Many remains of mining activities
+---
