@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Exploration of Polar Areas/Lecture III - Exploration and Exploitation.md",
+                "file": "Radio Astronomy/2. Radiation Fundamentals.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lecture III - Exploration and Exploitation"
+              "title": "2. Radiation Fundamentals"
             }
           }
         ]
@@ -138,10 +138,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Exploration of Polar Areas/Lecture III - Exploration and Exploitation.md"
+                "file": "Radio Astronomy/2. Radiation Fundamentals.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of Lecture III - Exploration and Exploitation"
+              "title": "Outline of 2. Radiation Fundamentals"
             }
           }
         ]
@@ -165,9 +165,9 @@
   },
   "active": "271eca2e444e6126",
   "lastOpenFiles": [
+    "Exploration of Polar Areas/Lecture III - Exploration and Exploitation.md",
     "Advanced Mechanics/2. Lagrangian Mechanics.md",
     "Radio Astronomy/2. Radiation Fundamentals.md",
-    "Exploration of Polar Areas/Lecture III - Exploration and Exploitation.md",
     "Exploration of Polar Areas/Lecture I - Arctic Council.md",
     "Advanced Mechanics/1. Variational Calculus.md",
     "Radio Astronomy/1. Introduction.md",
