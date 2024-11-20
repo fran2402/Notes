@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Radio Astronomy/3. Dipole Antennas.md",
+                "file": "Advanced Mechanics/2. Lagrangian Mechanics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 3. Dipole Antennas"
+              "title": "Backlinks for 2. Lagrangian Mechanics"
             }
           },
           {
@@ -166,7 +166,11 @@
   "active": "987afda8dbd72a00",
   "lastOpenFiles": [
     "Radio Astronomy/2. Fundamentals.md",
+    "Radio Astronomy/Images/electric_field.gif",
+    "Radio Astronomy/Images/magnetic_field.gif",
+    "Radio Astronomy/3. Dipole Antennas.md",
     "Advanced Mechanics/2. Lagrangian Mechanics.md",
+    "Advanced Mechanics/1. Variational Calculus.md",
     "Advanced Mechanics/Images/Pasted image 20241120123757.png",
     "Advanced Mechanics/Images/Pasted image 20241120123657.png",
     "Advanced Mechanics/Images/Pasted image 20241120123459.png",
@@ -174,15 +178,11 @@
     "Advanced Mechanics/Images",
     "Radio Astronomy/Images/Pasted image 20241120123242.png",
     "Radio Astronomy/Images/Pasted image 20241120123150.png",
-    "Radio Astronomy/3. Dipole Antennas.md",
     "Radio Astronomy/Images/Pasted image 20241120123024.png",
     "Radio Astronomy/Images/Pasted image 20241120122913.png",
-    "Pasted image 20241120121545.png",
-    "Pasted image 20241120122549.png",
     "Radio Astronomy/1. Introduction.md",
     "Exploration of Polar Areas/Lecture III - Exploration and Exploitation.md",
     "Exploration of Polar Areas/Lecture II - Mining.md",
-    "Advanced Mechanics/1. Variational Calculus.md",
     "Exploration of Polar Areas/Lecture I - Arctic Council.md",
     "Euler's equation.md",
     "Radio Astronomy/Images",
