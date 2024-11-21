@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Advanced Mechanics/2. Lagrangian Mechanics.md",
-                "mode": "preview",
+                "file": "Radio Astronomy/3. Dipole Antennas.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2. Lagrangian Mechanics"
+              "title": "3. Dipole Antennas"
             }
           }
         ]
@@ -138,10 +138,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Advanced Mechanics/2. Lagrangian Mechanics.md"
+                "file": "Radio Astronomy/3. Dipole Antennas.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of 2. Lagrangian Mechanics"
+              "title": "Outline of 3. Dipole Antennas"
             }
           }
         ]
@@ -165,13 +165,13 @@
   },
   "active": "987afda8dbd72a00",
   "lastOpenFiles": [
+    "Radio Astronomy/2. Fundamentals.md",
+    "Advanced Mechanics/2. Lagrangian Mechanics.md",
     "Advanced Mechanics/Images/cone.png",
     "Radio Astronomy/3. Dipole Antennas.md",
-    "Radio Astronomy/2. Fundamentals.md",
     "Exploration of Polar Areas/Lecture II - Mining.md",
     "Radio Astronomy/Images/electric_field.gif",
     "Radio Astronomy/Images/magnetic_field.gif",
-    "Advanced Mechanics/2. Lagrangian Mechanics.md",
     "Advanced Mechanics/1. Variational Calculus.md",
     "Advanced Mechanics/Images/Pasted image 20241120123757.png",
     "Advanced Mechanics/Images/Pasted image 20241120123657.png",
@@ -181,7 +181,6 @@
     "Radio Astronomy/Images/Pasted image 20241120123242.png",
     "Radio Astronomy/Images/Pasted image 20241120123150.png",
     "Radio Astronomy/Images/Pasted image 20241120123024.png",
-    "Radio Astronomy/Images/Pasted image 20241120122913.png",
     "Radio Astronomy/1. Introduction.md",
     "Exploration of Polar Areas/Lecture III - Exploration and Exploitation.md",
     "Exploration of Polar Areas/Lecture I - Arctic Council.md",
