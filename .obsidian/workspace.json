@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Radio Astronomy/5. Radiometers.md",
-                "mode": "source",
+                "file": "Radio Astronomy/4. Filled Apertures.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "5. Radiometers"
+              "title": "4. Filled Apertures"
             }
           }
         ]
@@ -138,10 +138,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Radio Astronomy/5. Radiometers.md"
+                "file": "Radio Astronomy/4. Filled Apertures.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of 5. Radiometers"
+              "title": "Outline of 4. Filled Apertures"
             }
           }
         ]
@@ -163,10 +163,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "792e78622b931d2e",
+  "active": "cf9d97370a394a72",
   "lastOpenFiles": [
-    "Radio Astronomy/4. Filled Apertures.md",
     "Radio Astronomy/5. Radiometers.md",
+    "Radio Astronomy/4. Filled Apertures.md",
     "Radio Astronomy/3. Dipole Antennas.md",
     "Advanced Mechanics/2. Lagrangian Mechanics.md",
     "Advanced Mechanics/1. Variational Calculus.md",
