@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Radio Astronomy/4. Filled Apertures.md",
-                "mode": "preview",
+                "file": "Radio Astronomy/5. Radiometers.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "4. Filled Apertures"
+              "title": "5. Radiometers"
             }
           }
         ]
@@ -138,10 +138,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Radio Astronomy/4. Filled Apertures.md"
+                "file": "Radio Astronomy/5. Radiometers.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of 4. Filled Apertures"
+              "title": "Outline of 5. Radiometers"
             }
           }
         ]
@@ -165,16 +165,16 @@
   },
   "active": "cf9d97370a394a72",
   "lastOpenFiles": [
-    "Radio Astronomy/5. Radiometers.md",
     "Radio Astronomy/4. Filled Apertures.md",
     "Radio Astronomy/3. Dipole Antennas.md",
+    "Radio Astronomy/2. Fundamentals.md",
+    "Exploration of Polar Areas/Lecture III - Exploration and Exploitation.md",
+    "Exploration of Polar Areas/Lecture IV - Rights of Nature.md",
+    "Exploration of Polar Areas/Lecture V - Arctic Environmental Pollution.md",
+    "Radio Astronomy/5. Radiometers.md",
     "Advanced Mechanics/2. Lagrangian Mechanics.md",
     "Advanced Mechanics/1. Variational Calculus.md",
-    "Exploration of Polar Areas/Lecture III - Exploration and Exploitation.md",
-    "Exploration of Polar Areas/Lecture V - Arctic Environmental Pollution.md",
-    "Exploration of Polar Areas/Lecture IV - Rights of Nature.md",
     "Exploration of Polar Areas/Lecture I - Arctic Council.md",
-    "Radio Astronomy/2. Fundamentals.md",
     "Advanced Mechanics/Images/cone.png",
     "Exploration of Polar Areas/Lecture II - Mining.md",
     "Radio Astronomy/Images/electric_field.gif",
