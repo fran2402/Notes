@@ -77,7 +77,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 210.5
+    "width": 210.5,
+    "collapsed": true
   },
   "right": {
     "id": "5a1a9034679de856",
@@ -165,14 +166,14 @@
   },
   "active": "cf9d97370a394a72",
   "lastOpenFiles": [
+    "Advanced Mechanics/2. Lagrangian Mechanics.md",
+    "Radio Astronomy/5. Radiometers.md",
     "Radio Astronomy/4. Filled Apertures.md",
     "Radio Astronomy/3. Dipole Antennas.md",
     "Radio Astronomy/2. Fundamentals.md",
     "Exploration of Polar Areas/Lecture III - Exploration and Exploitation.md",
     "Exploration of Polar Areas/Lecture IV - Rights of Nature.md",
     "Exploration of Polar Areas/Lecture V - Arctic Environmental Pollution.md",
-    "Radio Astronomy/5. Radiometers.md",
-    "Advanced Mechanics/2. Lagrangian Mechanics.md",
     "Advanced Mechanics/1. Variational Calculus.md",
     "Exploration of Polar Areas/Lecture I - Arctic Council.md",
     "Advanced Mechanics/Images/cone.png",
