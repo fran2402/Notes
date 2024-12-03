@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Exploration of Polar Areas/Lecture VII - International governance of Antarctica.md",
+                "file": "Advanced Mechanics/3. Non-inertial Frames.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lecture VII - International governance of Antarctica"
+              "title": "3. Non-inertial Frames"
             }
           }
         ]
@@ -138,10 +138,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Exploration of Polar Areas/Lecture VII - International governance of Antarctica.md"
+                "file": "Advanced Mechanics/3. Non-inertial Frames.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of Lecture VII - International governance of Antarctica"
+              "title": "Outline of 3. Non-inertial Frames"
             }
           }
         ]
@@ -165,24 +165,25 @@
   },
   "active": "4dd7e27dea5910a2",
   "lastOpenFiles": [
-    "Advanced Mechanics/3. Non-inertial Frames.md",
     "Exploration of Polar Areas/Lecture VII - International governance of Antarctica.md",
-    "Exploration of Polar Areas/Lecture II - Mining.md",
+    "Advanced Mechanics/3. Non-inertial Frames.md",
+    "Radio Astronomy/2. Fundamentals.md",
+    "Radio Astronomy/1. Introduction.md",
+    "Radio Astronomy/5. Radiometers.md",
+    "Radio Astronomy/4. Filled Apertures.md",
     "Advanced Mechanics/2. Lagrangian Mechanics.md",
     "Advanced Mechanics/1. Variational Calculus.md",
+    "Exploration of Polar Areas/Lecture II - Mining.md",
     "Advanced Mechanics/Images/cone.png",
     "Science in Polar Areas/Outline.md",
     "Science in Polar Areas/Essay 1 Idea.md",
     "Exploration of Polar Areas/Lecture VI - Commercial Whaling.md",
     "Exploration of Polar Areas/Lecture V - Arctic Environmental Pollution.md",
     "Science in Polar Areas/Essay 2 Idea.md",
-    "Radio Astronomy/5. Radiometers.md",
-    "Radio Astronomy/4. Filled Apertures.md",
     "Radio Astronomy/3. Dipole Antennas.md",
     "Science in Polar Areas",
     "Exploration of Polar Areas/Lecture III - Exploration and Exploitation.md",
     "Exploration of Polar Areas/Lecture I - Arctic Council.md",
-    "Radio Astronomy/2. Fundamentals.md",
     "Exploration of Polar Areas/Lecture IV - Rights of Nature.md",
     "Radio Astronomy/Images/electric_field.gif",
     "Radio Astronomy/Images/magnetic_field.gif",
@@ -194,7 +195,6 @@
     "Radio Astronomy/Images/Pasted image 20241120123242.png",
     "Radio Astronomy/Images/Pasted image 20241120123150.png",
     "Radio Astronomy/Images/Pasted image 20241120123024.png",
-    "Radio Astronomy/1. Introduction.md",
     "Euler's equation.md",
     "Radio Astronomy/Images",
     "Planetary Systems/Magnetospheres.md",
