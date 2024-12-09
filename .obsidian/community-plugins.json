@@ -4,5 +4,7 @@
   "obsidian-tikzjax",
   "obsidian-git",
   "giphy",
-  "github-copilot"
+  "github-copilot",
+  "callout-manager",
+  "templater-obsidian"
 ]

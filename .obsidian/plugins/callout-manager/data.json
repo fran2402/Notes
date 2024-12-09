@@ -20,6 +20,25 @@
             "color": "83, 223, 221"
           }
         }
+      ],
+      "cite": [
+        {
+          "changes": {}
+        },
+        {
+          "condition": {
+            "colorScheme": "light"
+          },
+          "changes": {}
+        },
+        {
+          "condition": {
+            "colorScheme": "dark"
+          },
+          "changes": {
+            "color": "158, 158, 158"
+          }
+        }
       ]
     }
   },
