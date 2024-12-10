@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Exploration of Polar Areas/Lecture 8 - Arctic oil and gas.md",
-                "mode": "preview",
+                "file": "Radio Astronomy/6. Interferometers.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lecture 8 - Arctic oil and gas"
+              "title": "6. Interferometers"
             }
           }
         ]
@@ -138,10 +138,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Exploration of Polar Areas/Lecture 8 - Arctic oil and gas.md"
+                "file": "Radio Astronomy/6. Interferometers.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of Lecture 8 - Arctic oil and gas"
+              "title": "Outline of 6. Interferometers"
             }
           }
         ]
@@ -168,9 +168,10 @@
   "active": "4dd7e27dea5910a2",
   "lastOpenFiles": [
     "Radio Astronomy/5. Radiometers.md",
+    "Radio Astronomy/6. Interferometers.md",
+    "Exploration of Polar Areas/Lecture 8 - Arctic oil and gas.md",
     "Advanced Mechanics/2. Lagrangian Mechanics.md",
     "Advanced Mechanics/3. Non-inertial Frames.md",
-    "Exploration of Polar Areas/Lecture 8 - Arctic oil and gas.md",
     "Exploration of Polar Areas/Lecture 6 - Commercial Whaling.md",
     "Exploration of Polar Areas/Lecture 7 - International governance of Antarctica.md",
     "Exploration of Polar Areas/Lecture 5 - Arctic Environmental Pollution.md",
@@ -194,7 +195,6 @@
     "Advanced Mechanics/Images/cone.png",
     "Science in Polar Areas/Outline.md",
     "Science in Polar Areas/Essay 1 Idea.md",
-    "Science in Polar Areas/Essay 2 Idea.md",
     "Science in Polar Areas",
     "Radio Astronomy/Images/electric_field.gif",
     "Radio Astronomy/Images/magnetic_field.gif",
