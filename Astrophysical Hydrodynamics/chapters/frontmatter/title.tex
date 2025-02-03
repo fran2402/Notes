@@ -1,0 +1,49 @@
+\pdfbookmark{Title Page}{titlepage} % Add PDF outline entry
+\thispagestyle{empty} % No number on the title page
+
+\newlength{\myl}
+\settowidth{\myl}{\fontsize{25}{30} \selectfont \bfseries \MakeUppercase{\Title}}
+\setlength{\myl}{\dimexpr\myl/2\relax}
+
+\begin{tikzpicture}[remember picture,overlay]
+    %\fill[MainColor] (current page.south west) rectangle (current page.north east);
+
+    \begin{scope}
+        \foreach \i in {2.5,...,20} {
+            \node[rounded corners,MainColor!10,draw,regular polygon,regular polygon sides=6, minimum size=\i cm,ultra thick] at ($(current page.west)+(2.5,-5)$) {};
+        }
+    \end{scope}
+
+    \foreach \i in {0.5,...,20} {
+        \node[rounded corners,MainColor!10,draw,regular polygon,regular polygon sides=6, minimum size=\i cm,ultra thick] at ($(current page.north west)+(2.5,0)$) {};
+    }
+    \foreach \i in {0.5,...,22} {
+        \node[rounded corners,MainColor!10,draw,regular polygon,regular polygon sides=6, minimum size=\i cm,ultra thick] at ($(current page.north east)+(0,-9.5)$) {};
+    }
+    \foreach \i in {21,...,0.5} {
+        \node[MainColor!10,rounded corners,draw,regular polygon,regular polygon sides=6, minimum size=\i cm,ultra thick] at ($(current page.south east)+(-0.2,-0.45)$) {};
+    }
+
+    % Title, Subtitle, and Author nodes
+    \node[left,black,minimum width=0.625*\paperwidth,minimum height=3cm, rounded corners,opacity=0] 
+        (title) at ($(current page.north east)+(-1,-9.5)$) 
+        {{\fontsize{25}{30} \selectfont \bfseries \MakeUppercase{\Title}}};
+    % Align the "mathcal I" with the first character of \Title dynamically
+    \node[left,MainColor!17,minimum width=0.625*\paperwidth,minimum height=3cm, rounded corners] 
+        at ($(current page.north east)+(-1,-9.5)+(-\myl,0)+(1.2,0)$) 
+        {{\fontsize{100}{50} \selectfont \MakeUppercase{$\mathcal{\firstletters{\Title}}$}}};
+    \node[left,black,minimum width=0.625*\paperwidth,minimum height=3cm, rounded corners] 
+        (title) at ($(current page.north east)+(-1,-9.5)$) 
+        {{\fontsize{25}{30} \selectfont \bfseries \MakeUppercase{\Title}}};
+    \node[left,black,minimum width=0.625*\paperwidth,minimum height=2cm, rounded corners] at ($(current page.north east)+(-1,-11)$) {{\Large \textit{\Subtitle}}};
+    \node[left,black,minimum width=0.625*\paperwidth,minimum height=2cm, rounded corners] at ($(current page.north east)+(-1,-13)$) {{\large \textsc{\Author}}};
+    \node[left, minimum width=0.625*\paperwidth,minimum height=3cm] at ($(current page.north east)+(3,-25.5)$) {\includegraphics[width=0.23\textwidth]{/home/fran/Templates/LatexTemplates/TeXtured-master/preamble/img/rugr_fse_logoenv_zwart_rgb.png}};
+
+    % Year Node (Automatically updated)
+    \node[rounded corners, fill=MainColor!10, text=black, regular polygon, regular polygon sides=6, minimum size=2.5cm, inner sep=0pt, ultra thick] 
+        at ($(current page.west)+(2.5,-5)$) 
+        {\textbf{\LARGE \CurrentYear}};
+
+\end{tikzpicture}
+
+\newpage

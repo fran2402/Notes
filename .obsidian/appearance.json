@@ -13,5 +13,6 @@
     "imageinvert",
     "callout",
     "properties"
-  ]
+  ],
+  "showRibbon": false
 }
