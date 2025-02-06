@@ -9,4 +9,20 @@ The spectroscopic notation is a way to describe the energy levels of an atom or 
 \annotate[yshift=-0.5em]{below, right}{J}{Total angular momentum}
 \annotate[yshift=1em]{above, right}{p}{Term parity}
 \end{definition}
-The parity characterizes whether the wave function changes sign under reflection of all electron positions through the origin. It is blank for even parity and $o$ for odd parity.
+The parity characterizes whether the wave function changes sign under reflection of all electron positions through the origin. It is blank for even parity and $o$ for odd parity. The selection rules for the transitions are, 
+\begin{itemize}
+  \item Parity must change 
+  \item $\Delta L = 0, \pm 1$ 
+  \item $\Delta J = 0, \pm 1$, but $\Delta J = 0\rightarrow 0$ is forbidden
+  \item Only one single electron wavefunction $n\ell$ can change with $\Delta\ell = \pm 1$ 
+  \item $\Delta S = 0$ for electric dipole transitions
+\end{itemize} 
+This approximation is valid when radiation involved has $\lambda\gg a_0$.
+Each electron is affected by the electric field produced by all other charges within the atom, 
+\begin{equation}
+  D_{ki} = \int \psi^*_k(\mathbf{r})\eqnmarkbox[red]{dipole}{\mathbf{D}}\psi_i(\mathbf{r})\,d\mathbf{r}.
+\end{equation}
+\annotate[yshift=-0.5em]{below, right}{dipole}{Dipole approximation}\\
+
+\vspace{-5mm}
+\textsf{Forbidden lines} are when one of the rules is not satisfied, while the \textsf{semi-forbidden lines} are where the spin selection rule is violated, and are much weaker than intersystem (permitted) transitions.
