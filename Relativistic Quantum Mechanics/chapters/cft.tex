@@ -51,7 +51,7 @@ and another tensor can be defined as,
 
 \begin{definition}[Contraction of tensors]
   \begin{equation}
-    \eta_{\mu\alpha}T^{\alpha\nu\rho} = T_{\mu}^{\nu\rho}
+    \eta_{\mu\alpha}T^{\alpha\nu\rho} = T\indices{_\mu^\nu^\rho}
   \end{equation}
   \vspace{-0.5cm}
 \end{definition}
@@ -121,9 +121,9 @@ the Euler-Lagrange equation is,
     \mathcal{L} = -\frac{1}{2}(\partial_\mu A_\nu)(\partial_\alpha A_\beta)\eta^{\mu\alpha}\eta^{\nu\beta} + \frac{1}{2}(\partial_\mu A^\mu)^2.
   \end{equation}
 \end{Question}
-\begin{lemma}[Dirac delta]
+\begin{lemma}[Kronecker delta]
   \begin{equation}
-    \frac{\partial A_\mu }{\partial A_\nu} = \delta^\nu_\mu 
+    \frac{\partial A_\mu }{\partial A_\nu} = \delta^\nu_\mu \quad \partial_\mu A^\nu = \delta^\nu_\mu
   \end{equation}
   \vspace{-0.5cm}
 \end{lemma}
@@ -133,6 +133,7 @@ Knowing that there is no $A_\nu$ dependence as all $A_\nu$ terms are in the deri
   \partial_\sigma \left(\frac{\partial \mathcal{L}}{\partial (\partial_\sigma A_\tau)}\right) = 0,
 \end{equation}
 and the Maxwell's equations are derived as,
+\begin{derivation}
 \begin{equation}
   \begin{aligned}
     -\frac{1}{2} \partial_\sigma \eta^{\mu\alpha}\eta^{\nu\beta} \left(\partial_\mu A_\nu \frac{\partial(\partial_\alpha A_\beta)}{\partial (\partial_\sigma A_\tau)} + \frac{\partial(\partial_\mu A_\nu)}{\partial (\partial_\sigma A_\tau)}\partial_\alpha A_\beta\right) + \partial_\sigma\left(\partial_\mu A^\mu \eta^{\mu\nu}\frac{\partial(\partial_\mu A_\nu)}{\partial (\partial_\sigma A_\tau)}\right) &= 0\\
@@ -143,6 +144,7 @@ and the Maxwell's equations are derived as,
    -\partial_\mu F^{\mu\nu} &= 0,
   \end{aligned}
 \end{equation}
+\end{derivation}
 where $F_{\mu\nu} = \partial_\mu A_\nu - \partial_\nu A_\mu$ is the \textsf{field strength tensor}.
 \subsubsection{Klein-Gordon equation}
 Another example is the Klein-Gordon equation,
@@ -150,7 +152,134 @@ Another example is the Klein-Gordon equation,
 \begin{aligned}
   \mathcal{L} &= \frac{1}{2}(\partial_\mu \phi)(\partial^\mu \phi) - \frac{1}{2}m^2\phi^2\\
               &= \frac{1}{2}\eta^{\mu\nu}(\partial_\mu \phi)(\partial_\nu \phi) - \frac{1}{2}m^2\phi^2\\
-              &= \frac{1}{2} \dot \phi^2 - \frac{1}{2}(\nabla \phi)^2 - \frac{1}{2}m^2\phi^2,
+              &= \eqnmarkbox[red]{T}{\frac{1}{2} \dot \phi^2} - \eqnmarkbox[blue]{V}{\frac{1}{2}(\nabla \phi)^2 - \frac{1}{2}m^2\phi^2},
 \end{aligned}
 \end{equation}
-which is a Lagrangian for a scalar field.
+\annotate[yshift=-0.5em]{below, left}{T}{$T=\int d^3x\frac{1}{2} \dot \phi^2$}
+\annotate[yshift=-0.5em]{below, right}{V}{$V=\int d^3x\left(\frac{1}{2}(\nabla \phi)^2 + \frac{1}{2}m^2\phi^2\right)$}\\
+
+\vspace{-3mm}
+which is a Lagrangian for a scalar field. To find the equations of motion, the Euler-Lagrange equation is used,
+\begin{equation}
+  \frac{\partial\mathcal{L}}{\partial\phi} = -m^2\phi \quad \frac{\partial\mathcal{L}}{\partial(\partial_\mu \phi)} = \partial^\mu \phi,
+\end{equation}
+\begin{derivation}
+  \begin{equation}
+    \begin{aligned}
+      \frac{\partial\mathcal{L}}{\partial(\partial_\sigma\phi)} &= \frac{1}{2}\eta^{\mu\nu}\left(\partial_\mu\phi \frac{\partial(\partial_\nu\phi)}{\partial(\partial_\sigma\phi)} + \frac{\partial(\partial_\mu\phi)}{\partial(\partial_\sigma\phi)}\partial_\nu\phi\right)\\
+                                                             &= \frac{1}{2}\eta^{\mu\nu}(\partial_\mu\phi \delta^\sigma_\nu + \delta^\sigma_\mu\partial_\nu\phi)\\
+                                                             &= \frac{1}{2}(\eta^{\mu\sigma}\partial_\mu\phi + \eta^{\sigma\nu}\partial_\nu\phi)\\
+                                                             &=\partial^\sigma\phi,
+    \end{aligned}
+  \end{equation}
+\end{derivation}
+
+and the Klein-Gordon equation is derived as,
+\begin{equation}
+  \partial_\mu \partial^\mu \phi + m^2\phi = 0. 
+\end{equation}
+
+\subsubsection{First Order Lagrangians}
+Consider a Lagrangian that is linear in time derivatives, 
+\begin{equation}
+  \mathcal{L} = \frac{i}{2}(\psi^*\dot\psi - \dot\psi^*\psi) - \nabla\psi^*\cdot\nabla\psi - m\psi^*\psi,
+\end{equation}
+treating $\psi$ and $\psi^*$ as independent variables. The Euler-Lagrange equations are then,
+\begin{equation}
+  \frac{\partial\mathcal{L}}{\partial\psi^*} = \frac{i}{2}\dot\psi - m\psi \quad \frac{\partial\mathcal{L}}{\partial\psi^*} = -\frac{i}{2}\psi \quad \frac{\partial\mathcal{L}}{\partial\nabla\psi^*} = -\nabla\psi,
+\end{equation}
+giving the equation of motion, 
+\begin{equation}
+  i\dot\psi = -\nabla^2\psi +m\psi.
+\end{equation}
+Compared to the Klein-Gordon equation, only $\psi$ and $\psi^*$ are needed to determine the future evolution compared to needing $\phi$ and $\dot\phi$.
+
+\subsubsection{Note on locality}
+All examples above, as well as all thories of nature are local. This means that there are no terms in the Lagrangian that look like, 
+\begin{equation}
+  \mathcal{L} = \int d^3x\,d^3y\phi(\mathbf{x})\phi(\mathbf{y}). 
+\end{equation}
+One of the main reasons for introducing field theories in classical physics is to account for locality.
+
+\section{Lorenz invariance}
+
+Since relativity has to be accounted for, the field theory has to be invariant under Lorentz transformations, i.e., 
+\begin{equation}
+  x^\mu \rightarrow (x')^{\mu} = \Lambda\indices{^\mu_\nu}x^\nu,
+\end{equation}
+where, 
+\begin{lemma}[Lorentz tranformation]
+  \begin{equation}
+    \Lambda\indices{^\mu_\sigma}\eta^{\sigma\tau}\Lambda\indices{^\nu_\tau} = \eta^{\mu\nu}.
+  \end{equation}
+  \vspace{-0.5cm}
+\end{lemma}
+
+The field has to transform as well, a simple example is a scalar field which transforms as,
+\begin{Note}[Scalar field transformation]
+\begin{equation}
+  \phi(x) \rightarrow \phi'(x) = \phi(\Lambda^{-1}x),
+\end{equation}
+\end{Note}
+and the derivative of a scalar field transforms as, 
+\begin{Note}[Derivative of scalar field transformation]
+\begin{equation}
+  \partial_\mu \phi(x) \rightarrow (\Lambda^{-1})\indices{^\nu_\mu}\partial_\nu \phi(\Lambda^{-1}x).
+\end{equation}
+\end{Note}
+The inverse transformation is used as coordinates are not relabeled after the transformation. From the \textsf{Lorentz invariant theory}, if $\phi(x)$ is a solution to the equations of motion, then $\phi(\Lambda^{-1}x)$ is also a solution. 
+\subsubsection{Maxwell's equations}
+Using the Lorentz transformation $A^\mu(x) \rightarrow \Lambda\indices{^\mu_\nu}A^\nu(\Lambda^{-1}x)$, 
+\begin{derivation}
+  \begin{equation}
+    \begin{aligned}
+      (\partial_\mu A_\nu(x))(\partial_\beta A^\nu(x))\eta^{\mu\beta} &\rightarrow (\partial_\mu\eta_{\nu\alpha}\Lambda\indices{^\alpha_\gamma}\eta^{\gamma\epsilon}A_\epsilon(\Lambda^{-1}x))( \partial_\beta\Lambda\indices{^\nu_\delta}\eta^{\delta\zeta}A_\zeta(\Lambda^{-1}x))\eta^{\mu\beta}\\
+                                                                      &= \eta_{\nu\alpha}\Lambda\indices{^\alpha_\gamma}\eta^{\gamma\epsilon}\Lambda\indices{^\nu_\delta}\eta^{\delta\zeta}(\partial_\mu A_\epsilon(\Lambda^{-1}x))(\partial_\beta A_\zeta(\Lambda^{-1}x))\eta^{\mu\beta}\\
+                                                                      &= \Lambda\indices{_\nu^\epsilon}\Lambda\indices{^\nu^\zeta}(\partial_\mu A_\epsilon(\Lambda^{-1}x))(\partial_\beta A_\zeta(\Lambda^{-1}x))\eta^{\mu\beta}\\
+                                                                      &= (\partial_\mu A_\epsilon(\Lambda^{-1}x))(\partial_\beta A_\zeta(\Lambda^{-1}x))\eta^{\mu\beta}\eta^{\epsilon\zeta}\\
+                                                                      &= (\partial_\mu A_\epsilon(\Lambda^{-1}x))(\partial_\beta A^\epsilon(\Lambda^{-1}x))\eta^{\mu\beta},
+    \end{aligned}
+  \end{equation}
+
+\end{derivation}
+where the derivation used, 
+\begin{derivation}
+  \begin{equation}
+    \begin{aligned}
+      \Lambda\indices{^\mu_\alpha}\Lambda\indices{^\nu_\beta}\eta_{\mu\nu} &= \eta_{\alpha\beta}\\
+      \eta^{\alpha\epsilon}\eta^{\beta\zeta}\Lambda\indices{^\mu_\alpha}\Lambda\indices{^\nu_\beta}\eta_{\mu\nu} &= \eta^{\alpha\epsilon}\eta^{\beta\zeta}\eta_{\alpha\beta}\\ 
+      \Rightarrow \quad \Lambda\indices{_\nu^\epsilon}\Lambda\indices{^\nu^\zeta} &= \eta^{\epsilon\zeta}.
+    \end{aligned}
+  \end{equation}
+\end{derivation}
+For the second part of the Lagrangian,
+\begin{derivation}
+  \begin{equation}
+    \begin{aligned}
+      \partial_\mu A^\mu(x) &\rightarrow (\Lambda^{-1})\indices{^\alpha_\mu}\partial_\alpha \Lambda\indices{^\mu_\beta}A^\beta(\Lambda^{-1}x)\\
+                           &= \delta^\alpha_\beta\partial_\alpha A^\beta(\Lambda^{-1}x)\\
+                           &= \partial_\alpha A^\alpha(\Lambda^{-1}x),
+    \end{aligned}
+  \end{equation}
+\end{derivation}
+showing that Maxwell's equations are \hyellow{Lorentz invariant}.
+
+\subsubsection{Klein-Gordon equation}
+The Klein-Gordon equation \hyellow{is Lorentz invariant}, as the derivatives transform as,
+\begin{derivation}
+  \begin{equation}
+    \begin{aligned}
+      \partial_\mu \phi(x)\partial_\nu\phi(x)\eta^{\mu\nu} &\rightarrow (\Lambda^{-1})\indices{^\rho_\mu}\partial_\rho \phi(\Lambda^{-1}x)(\Lambda^{-1})\indices{^\sigma_\nu}\partial_\sigma\phi(\Lambda^{-1}x)\eta^{\mu\nu}\\
+                                                           &= \partial_\rho \phi(\Lambda^{-1}x)\partial_\sigma\phi(\Lambda^{-1}x)\Lambda\indices{^\rho_\mu}\eta^{\mu\nu}\Lambda\indices{^\sigma_\nu}\\
+                                                           &= \partial_\rho \phi(\Lambda^{-1}x)\partial_\sigma\phi(\Lambda^{-1}x)\eta^{\rho\sigma}
+    \end{aligned}
+  \end{equation}
+\end{derivation}
+
+
+The action is then Lorentz invariant, however there is no Jacobian factor in the integral after change of variables due to $\text{det}\,\Lambda=1$.
+\subsubsection{First Order Lagrangians}
+Since the Lagrangian is linear in time derivative, but quadratic in spatial derivatives, the theory is \hyellow{not Lorentz invariant}.
+
+\section{Symmetries}
+
