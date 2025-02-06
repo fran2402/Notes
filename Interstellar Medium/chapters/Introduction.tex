@@ -1,3 +1,119 @@
 \chapternotnumbered{Introduction} \label{ch:Introduction}
 
-agjhgsjhgsjhg
+Studying the interstellar medium is fundamental to understand the stellar formuation. Molecular gas, cool enough, is needed to start to collapse and to compress. The condition for the gravitational collapse is given by the \textsf{Jeans length and mass},
+\vspace{5mm}
+\begin{equation}
+  \begin{aligned}
+    \lambda_J &= \left( \frac{\pi \eqnmarkbox[blue]{sound}{c_s}^2}{G \eqnmarkbox[red]{density}{\rho}} \right)^{1/2}, \\ 
+    \vspace{10mm}\\
+    M_J &= \frac{4\pi}{3} \rho \frac{\lambda_J^3}{8},
+  \end{aligned}
+\end{equation}
+\annotate[yshift=1em]{above}{sound}{Speed of sound}
+\annotate[yshift=-0.3em]{below}{density}{Density of the cloud}
+\vspace{-5mm}
+
+The Jeans mass is the mass of a cloud that is stable against gravitational collapse. If the cloud is more massive than the Jeans mass, it will collapse. 
+\section*{Particle collisions}
+
+In \textsf{elastic collisions}, the total kinetic energy is conserved. Looking at the diagram, the target has a mass $M\gg m$ and the projectile has a mass $m$. The target is at rest and the projectile has an initial velocity $\mathbf{v}$. The impact parameter $b$ is the distance of closest approach where there is no interaction between paticles.
+
+\begin{center}
+\begin{tikzpicture}
+
+  \draw[dashed] (0,0) -- (0,3) node[left,midway]{$b$};
+  \draw[dashed] (0,0) -- (3,3) node[right,midway,xshift=5pt]{$b\sec\phi$};
+  \draw[dashed] (0,3) -- (3,3) node[above,midway]{$b\tan\phi$};
+  \fill (0,0) circle (6pt) node[left, xshift=-5pt]{$M$};
+  \fill (3,3) circle (3pt) node[above, xshift=-5pt]{$m$};
+  \draw[->] (3,3) -- (4,3) node[right]{$v_1$};
+  \draw[->] (3,3) -- (4,4) node[right]{$\mathbf{F}$};
+  \node at (0.25,0.7) {$\phi$};
+
+  \draw[->] (5.25, 3.5) -- (6.55, 3.5) node[right]{$\parallel$};
+  \draw[->] (5.25, 3.5) -- (5.25, 4.8) node[above]{$\perp$};
+\end{tikzpicture}
+\end{center}
+
+The transfer of momentum is described with, 
+\begin{equation}
+  \begin{aligned}
+    \Delta p_\perp &= \int_{-\infty}^{\infty} F_\perp\,dt\\
+                   &= \int_{-\infty}^{\infty} \frac{Z_1 Z_2 e^2}{(b / \cos\phi)^2}\cos\phi\,dt\\
+                   &= \frac{Z_1 Z_2 e^2}{b^2} \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \cos^3\phi\,\frac{d(b\tan\phi)}{v_1}, \quad \text{as } \frac{d|\mathbf{r}|}{dt}=v_1\\
+                   &= \frac{Z_1 Z_2 e^2}{b v_1} \int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \cos^3\phi \,\frac{d\phi}{\cos^2\phi}\\
+                   &= \frac{2 Z_1 Z_2 e^2}{b v_1}.
+  \end{aligned}
+\end{equation}
+
+The classical approximation is still valid if $b \gg a_0$, where
+\begin{Note}[Bohr radius]
+\begin{equation}
+  a_0 = \frac{\hbar^2}{m_e e^2} = 5.292\times10^{-9}\,\text{cm},
+\end{equation}
+\end{Note}
+the wave function of the target electron will not be effected.\\
+For de-excitation of ions due to electron collisions, the coefficient is given by
+\begin{definition}[De-excitation rate coefficient]
+\begin{equation}
+  \langle\sigma v\rangle_{u\rightarrow l} \approx \pi a_0^2 \left(\frac{8kT}{\pi m_e}\right)^{1/2} \left(1+\frac{Ze^2}{a_0kT}\right),
+\end{equation}
+\vspace{-5mm}
+\end{definition}
+which comes from the conservation of energy,
+\begin{equation}
+  \frac{1}{2}m_e v^2_\text{max} = \frac{1}{2}m_e v + \frac{Ze^2}{r_\text{min}},
+\end{equation}
+the momentum conservation, 
+\begin{equation}
+  v_\text{max} r_\text{min} = vb_\text{crit},
+\end{equation}
+and defining the average cross section, using the velocity distribution field,  
+\begin{equation}
+  \langle\sigma v\rangle = \int_0^\infty \sigma(v)v f(v)\,dv, \quad \text{where } \sigma = \pi b^2_\text{crit}
+\end{equation}
+
+\section*{Statistical mechanics}
+The \textsf{partition function} is defined as 
+\begin{equation}
+  Z(T) = \sum_i g_i e^{-E_i/kT},
+\end{equation}
+where $g_i$ is the degeneracy of the energy level $E_i$. For an isothermal system, 
+\begin{equation}
+  \frac{P(s_1)}{P(s_2)} = \frac{\Omega(s_1)}{\Omega(s_2)} \quad S = k\ln\Omega.
+\end{equation}
+
+The relative number of particles in energy level $j$ with respect to the energy level $i$ is given by
+\begin{definition}[Boltzmann equation]
+\begin{equation}
+  \frac{N_j}{N_i} = \frac{g_j}{g_i}e^{-(E_j-E_i)/kT}. 
+\end{equation}
+\vspace{-5mm}
+\end{definition}
+The \textsf{detailed balance} is a statistical description of how many particles are in one state as opposed to the other. The ratio of number densities is proportional to the ratio of partition functions per unit volume, 
+\begin{equation}
+  \frac{\prod_j n(P_j)}{\prod_i n(P_i)} = \frac{\prod_j f(P_j)}{\prod_i f(P_i)}. 
+\end{equation}
+The \textsf{rate coefficient} per unit volume is, 
+\begin{equation}
+  R=n_A n_B \langle\sigma v\rangle_{AB} \quad \text{where } \langle\sigma v\rangle_{AB} = \int_0^\infty \sigma_{AB}(v)v f(v)\,dv.
+\end{equation}
+
+The Saha equation is used to describe the ionization of a gas, it links the number of atoms in the ionization state versus the other. It is given by,
+\begin{definition}[Saha equation]
+\begin{equation}
+  \eqnmarkbox[blue]{ratio}{\frac{n_{i+1}}{n_i}} = \frac{2}{\eqnmarkbox[red]{electron}{n_e}}\eqnmarkbox[PineGreen]{zratio}{\frac{Z_{i+1}(T)}{Z_i(T)}}\left(\frac{2\pi m_e kT}{h^2}\right)^{3/2}e^{-\eqnmarkbox[orange]{ionization}{E_i}/kT}, 
+\end{equation}
+\annotate[yshift=-0.5em]{below, left}{ratio}{Ionization ratio}
+\annotate[yshift=-0.5em]{below, right}{electron}{Electron density}
+\annotate[yshift=1em]{above, right}{zratio}{Partition function ratio}
+\annotate[yshift=1em]{above, right}{ionization}{Ionization potential}
+%\vspace{-5mm}
+\end{definition}
+ The last term assumes that the temperature is not too high, making the lowest energy term important and it is in the \textsf{local thermodynamic equilibrium}.
+
+\section*{Quantum mechanics}
+Molecular transitions are important for the interstellar medium. The more symmetric the molecule, the weaker emission lines it will have, due to the lack of the permanent dipole moment. The dipole moment is given by,
+\begin{equation}
+  \mu_L = \frac{e\omega r_e^2}{2c} \quad L = m\omega r_e^2 = \sqrt{j(j+1)}\hbar. 
+\end{equation}

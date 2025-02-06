@@ -1,0 +1,156 @@
+\chapter{Classical Field Theory}
+\section{Dynamics of fields}
+\subsection{Fields and their properties}
+A scalar field, named $a$ has a formula, 
+\begin{equation}
+  \phi_a(\mathbf{x}, t),
+\end{equation}
+like the electric and magnetic fields, $\mathbf{E}(\mathbf{x}, t)$, $\mathbf{B}(\mathbf{x}, t)$. As the space and time are now combined, the manifold has to be described using Minkowski spacetime.
+\begin{definition}[Metric]
+  \begin{equation}
+    ds^2 = -(dx^0)^2 + (dx_1)^2 + (dx_2)^2 + (dx_3)^2,
+  \end{equation}
+  \vspace{-0.5cm}
+\end{definition}
+
+or can be rewritten as a four-vector,
+\begin{equation}
+  x^\mu = (x^0, x^1, x^2, x^3) = (x^0, \mathbf{x}),
+\end{equation}
+where $x^0 = ct$ and $x^i = x^i$ for $i = 1, 2, 3$. The metric tensor is then,
+\begin{definition}[Metric tensor for Minkowski space]
+\begin{equation}
+  \eta_{\mu\nu} = \begin{bmatrix}
+    -1 & 0 & 0 & 0 \\
+    0 & 1 & 0 & 0 \\
+    0 & 0 & 1 & 0 \\
+    0 & 0 & 0 & 1 
+  \end{bmatrix}, 
+\end{equation}
+\vspace{-0.5cm}
+\end{definition}
+giving the metric as, 
+\begin{equation}
+  ds^2 = \eta_{\mu\nu}dx^\mu dx^\nu = \eta^{\mu\nu}dx_\mu dx_\nu. 
+\end{equation}\\
+
+\begin{Note}[Properties of the metric tensor]
+  \begin{equation}
+    \eta^{-1}\eta = \mathds{1},\quad \eta^{\mu\nu}\eta_{\nu\rho} = \delta^\mu_\rho.
+  \end{equation}
+\end{Note}\vspace{0.5cm}
+
+The covariant and contravariant vectors are related by the metric tensor,
+\begin{equation}
+  x_\mu = \eta_{\mu\nu}x^\nu, \quad x^\mu = \eta^{\mu\nu}x_\nu, 
+\end{equation}
+and another tensor can be defined as, 
+\begin{equation}
+  B^\mu = \eta^{\mu\nu}A_\nu, \quad A_\mu = \eta_{\mu\nu}B^\nu. 
+\end{equation}
+
+\begin{definition}[Contraction of tensors]
+  \begin{equation}
+    \eta_{\mu\alpha}T^{\alpha\nu\rho} = T_{\mu}^{\nu\rho}
+  \end{equation}
+  \vspace{-0.5cm}
+\end{definition}
+\vspace{0.5cm}
+Returning back to the definitions of the electric and magnetic fields, a field can be written as 
+\begin{equation}
+  A^{\mu} (\mathbf{x}, t) = (\phi, \mathbf{A}),
+\end{equation}
+where $\phi$ is the scalar potential and $\mathbf{A}$ is the vector potential. The electric and magnetic fields are connected to it by
+\begin{equation}
+  \mathbf{E} = -\nabla \phi - \frac{\partial \mathbf{A}}{\partial t}, \quad \mathbf{B} = \nabla \times \mathbf{A}. 
+\end{equation}
+
+\subsection{Action and Lagrangian}
+The action for a system is defined as,
+\begin{definition}[Action]
+  \begin{equation}
+    S = \int d^4x\, \mathcal{L} (\phi_a, \partial_\mu \phi_a),
+  \end{equation}
+  \vspace{-0.5cm}
+\end{definition}
+
+\begin{Note}[Partial derivatives]
+  \begin{equation}
+    \partial_\mu = \frac{\partial}{\partial x^\mu} = \left(\frac{\partial}{\partial t}, \nabla\right). 
+  \end{equation}
+\end{Note}
+
+A field is defined with no variation at the endpoints, $\delta \phi_a = 0$, and the action is stationary. Varying the action gives, 
+\begin{equation}
+  \delta S = \int d^4x\, \left(\frac{\partial \mathcal{L}}{\partial \phi_a}\delta \phi_a + \frac{\partial \mathcal{L}}{\partial (\partial_\mu \phi_a)}\delta (\partial_\mu \phi_a)\right).
+\end{equation}
+
+Using the property, 
+\begin{lemma}
+  \begin{equation}
+    \delta (AB) = A\,\delta B + B\,\delta A,
+  \end{equation}
+  \vspace{-0.5cm}
+\end{lemma}
+the variation of the action can be written as,
+\begin{equation}
+  \delta S = \int d^4x\, \left(\frac{\partial \mathcal{L}}{\partial \phi_a} - \partial_\mu \left(\frac{\partial \mathcal{L}}{\partial (\partial_\mu \phi_a)}\right)\right)\delta \phi_a + \partial_\mu \left(\frac{\partial \mathcal{L}}{\partial (\partial_\mu \phi_a)}\delta \phi_a\right).
+\end{equation}
+
+As the last term is a total derivative, it becomes 0 as it vanishes at the endpoints. The Euler-Lagrange equation is then,
+\newpage
+\begin{definition}[Euler-Lagrange equation]
+  \begin{equation}
+    \frac{\partial \mathcal{L}}{\partial \phi_a} - \partial_\mu \left(\frac{\partial \mathcal{L}}{\partial (\partial_\mu \phi_a)}\right) = 0.
+  \end{equation}
+  \vspace{-0.5cm}
+\end{definition}
+\subsubsection{Maxwell's equations}
+For example, taking the Lagrangian of the electromagnetic field, 
+\begin{equation}
+  \mathcal{L} = -\frac{1}{2}(\partial_\mu A_\nu)(\partial^\mu A^\nu) + \frac{1}{2}(\partial_\mu A^\mu)^2,
+\end{equation}
+the Euler-Lagrange equation is, 
+\begin{equation}
+  \partial_\mu \left(\frac{\partial \mathcal{L}}{\partial (\partial_\mu A_\nu)}\right) - \frac{\partial \mathcal{L}}{\partial A_\nu} = 0,
+\end{equation}
+
+\begin{Question}
+  Derive the Maxwell's equations for the electromagnetic field, given the Lagrangian
+  \begin{equation}
+    \mathcal{L} = -\frac{1}{2}(\partial_\mu A_\nu)(\partial_\alpha A_\beta)\eta^{\mu\alpha}\eta^{\nu\beta} + \frac{1}{2}(\partial_\mu A^\mu)^2.
+  \end{equation}
+\end{Question}
+\begin{lemma}[Dirac delta]
+  \begin{equation}
+    \frac{\partial A_\mu }{\partial A_\nu} = \delta^\nu_\mu 
+  \end{equation}
+  \vspace{-0.5cm}
+\end{lemma}
+  
+Knowing that there is no $A_\nu$ dependence as all $A_\nu$ terms are in the derivative, the Euler-Lagrange equation simplifies to,
+\begin{equation}
+  \partial_\sigma \left(\frac{\partial \mathcal{L}}{\partial (\partial_\sigma A_\tau)}\right) = 0,
+\end{equation}
+and the Maxwell's equations are derived as,
+\begin{equation}
+  \begin{aligned}
+    -\frac{1}{2} \partial_\sigma \eta^{\mu\alpha}\eta^{\nu\beta} \left(\partial_\mu A_\nu \frac{\partial(\partial_\alpha A_\beta)}{\partial (\partial_\sigma A_\tau)} + \frac{\partial(\partial_\mu A_\nu)}{\partial (\partial_\sigma A_\tau)}\partial_\alpha A_\beta\right) + \partial_\sigma\left(\partial_\mu A^\mu \eta^{\mu\nu}\frac{\partial(\partial_\mu A_\nu)}{\partial (\partial_\sigma A_\tau)}\right) &= 0\\
+    -\frac{1}{2} \partial_\sigma \eta^{\mu\alpha}\eta^{\nu\beta} \left(\partial_\mu A_\nu \delta^\sigma_\alpha \delta^\tau_\beta + \delta^\sigma_\mu \delta^\tau_\nu \partial_\alpha A_\beta\right) +  \partial_\sigma \eta^{\mu\nu} \left(\partial_\mu A^\mu \delta^\sigma_\mu \delta^\tau_\nu\right) &= 0\\
+    -\frac{1}{2} \partial_\sigma \left(\eta^{\mu\sigma}\eta^{\nu\tau}\partial_\mu A_\nu + \eta^{\sigma\alpha}\eta^{\tau\beta}\partial_\alpha A_\beta\right) +  \partial_\sigma \left(\eta^{\sigma\tau}\partial_\mu A^\mu\right) &= 0\\
+   -\partial_\sigma \partial^\sigma A^\tau + \partial^\tau \partial_\mu A^\mu &= 0\\
+   \text{reindexing }\sigma\rightarrow\mu, \tau\rightarrow\nu \quad -\partial_\mu (\partial^\mu A^\nu - \partial ^\nu A^\mu) &= 0\\
+   -\partial_\mu F^{\mu\nu} &= 0,
+  \end{aligned}
+\end{equation}
+where $F_{\mu\nu} = \partial_\mu A_\nu - \partial_\nu A_\mu$ is the \textsf{field strength tensor}.
+\subsubsection{Klein-Gordon equation}
+Another example is the Klein-Gordon equation,
+\begin{equation}
+\begin{aligned}
+  \mathcal{L} &= \frac{1}{2}(\partial_\mu \phi)(\partial^\mu \phi) - \frac{1}{2}m^2\phi^2\\
+              &= \frac{1}{2}\eta^{\mu\nu}(\partial_\mu \phi)(\partial_\nu \phi) - \frac{1}{2}m^2\phi^2\\
+              &= \frac{1}{2} \dot \phi^2 - \frac{1}{2}(\nabla \phi)^2 - \frac{1}{2}m^2\phi^2,
+\end{aligned}
+\end{equation}
+which is a Lagrangian for a scalar field.

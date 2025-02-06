@@ -1,0 +1,66 @@
+\chapter{Fluids as continuums}
+\section{Fluid element}
+A \textsf{fluid element} is a portion of the fluid of size $l$ that is large compared to the mean free path $\ell$, but small compared to the characteristic length scale of the system $L$,
+\begin{equation}
+  \ell \ll l \ll L. 
+\end{equation}
+The length scale is defined as
+\begin{equation}
+  L\sim\frac{q}{\nabla q}
+\end{equation}
+where $q$ is a macroscopic physical quantity. In a CNM, the ``worst case scenario'', $A = A(\text{H},\text{H})\approx 10^{-15}\,\text{cm}^{2}$, and $n\approx30\,\text{cm}^{-3}$, so $\ell\approx10^{13}\,\text{cm}$. This means that any structure in the ISM would have an interaction that is smaller than this. 
+
+\section{Advection}
+The \textsf{advection} of a fluid element is the transport of the element by the flow. Consider a fluid element moving with velocity $\mathbf{u}$ and has a generic quantity $q$ which is a function of position and time, $q(\mathbf{r},t)$. The change in $q$ is given by the \textsf{Lagrangian derivative},
+\begin{equation}
+  \frac{\text{D}q}{\text{D}t} = \frac{\partial q}{\partial t} + \mathbf{u}\cdot\nabla q. 
+\end{equation}
+It is explicitly defined as, 
+\begin{equation}
+  \begin{aligned}
+    \frac{\text{D}q}{\text{D}t} &=\lim_{\delta t\to0}\frac{q(\mathbf{r}+\delta \mathbf{r},t+\delta t) - q(\mathbf{r},t)}{\delta t}\\ 
+                  &= \lim_{\delta t\to0}\frac{q(\mathbf{r}+\delta \mathbf{r},t+\delta t) - q(\mathbf{r},t) + q(\mathbf{r}, t+\delta t) - q(\mathbf{r}, t+\delta t)}{\delta t}\\
+                  &=  \left(\frac{\partial q}{\partial t}\right)_{(\mathbf{r}, t)} + \lim_{\delta t\to0}\frac{q(\mathbf{r}+\delta \mathbf{r},t+\delta t)  - q(\mathbf{r}, t+\delta t)}{\delta t}\\
+                  &= \left(\frac{\partial q}{\partial t}\right)_{(\mathbf{r}, t)} + \lim_{\delta t\to0}\frac{ \delta\mathbf{r}\cdot(\nabla q)_{(\mathbf{r}, t)}}{\delta t}\\
+                  &= \frac{\partial q}{\partial t} + \mathbf{u}\cdot\nabla q.
+  \end{aligned}
+\end{equation}
+Taking $q$ to be a generic quantity, 
+\begin{definition}[Lagrangian derivative]
+\begin{equation}
+  \frac{\text{D}}{\text{D}t} = \eqnmarkbox[blue]{euler}{\frac{\partial}{\partial t}} + \eqnmarkbox[red]{advection}{\mathbf{u}\cdot\nabla}. 
+\end{equation}
+\annotate[yshift=-0.5em]{below}{euler}{Eulerian derivative}
+\annotate[yshift=+0.5em]{above}{advection}{Advection operator}
+\vspace{0cm}
+\end{definition}
+
+\section{Continuity equation}
+Consider a portion of fluid of density $\rho$ constained in a volume $V$. The mass inside the volume is, 
+\begin{equation}
+  M = \int_V \rho\,dV. 
+\end{equation} 
+The change in mass is given by the rate of change of mass inside the volume,
+\begin{equation}
+  \frac{\partial M}{\partial t} = \frac{\partial}{\partial t}\int_V \rho\,dV = -\oint_S \rho\mathbf{u}\cdot d\mathbf{S},
+\end{equation} 
+where $S$ is the surface of the volume $V$. Using the divergence theorem, 
+\begin{theorem}[Divergence theorem]
+\begin{equation}
+  \oint_S \mathbf{F}\cdot d\mathbf{S} = \int_V \nabla\cdot\mathbf{F}\,dV, 
+\end{equation}
+\vspace{-0.5cm}
+\end{theorem}
+the equation becomes, 
+\begin{equation}
+  \begin{aligned}
+    \frac{\partial}{\partial t}\int_V \rho\,dV &= -\oint_S \rho\mathbf{u}\cdot d\mathbf{S}\\
+                                  &= -\int_V \nabla\cdot(\rho\mathbf{u})\,dV\\
+                                  &\Rightarrow \frac{\partial \rho}{\partial t} + \nabla\cdot(\rho\mathbf{u}) = 0,
+  \end{aligned}
+\end{equation}
+which is the \textsf{continuity equation} or the \textsf{mass conservation equation}. It can be rewritten as, 
+\begin{equation}
+  \frac{\text{D}\rho}{\text{D}t} + \rho\nabla\cdot\mathbf{u} = 0. 
+\end{equation}
+For an \textsf{incompressible fluid}, $\nabla\cdot\mathbf{u} = 0 \Leftrightarrow \text{D}\rho/\text{D}t = 0$.

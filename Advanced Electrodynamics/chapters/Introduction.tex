@@ -1,3 +1,82 @@
 \chapternotnumbered{Introduction} \label{ch:Introduction}
+\begin{quote}
+  ``On the other hand, I think I can safely say that nobody understands quantum mechanics.'' -- Richard Feynman, 1965
+\end{quote}
 
-agjhgsjhgsjhg
+Four fundamental fources
+\begin{itemize}
+    \item \textsf{Gravitation}
+    \item \textsf{Electromagnetism}
+    \item \textsf{Strong nuclear force} 
+    \item \textsf{Weak nuclear force} 
+\end{itemize}
+
+In classical mechanics, we are dealing with point particles with mass and velocity; a wave has a wavelength and a frequency. 
+
+\textsf{Maxwell's equations} are the foundation of classical electromagnetism,
+\begin{definition}[Maxwell's equations]
+\begin{equation}
+\begin{aligned}
+  \nabla \cdot \mathbf{E} &= \frac{\rho}{\varepsilon_0} \\
+  \nabla \cdot \mathbf{B} &= 0 \\
+  \nabla \times \mathbf{E} &= -\frac{\partial \mathbf{B}}{\partial t} \\
+  \nabla \times \mathbf{B} &= \mu_0 \mathbf{J} + \mu_0 \varepsilon_0 \frac{\partial \mathbf{E}}{\partial t}
+\end{aligned}
+\end{equation}
+\vspace{-0.5cm}
+\end{definition}\\
+
+\begin{definition}[Maxwell's equations -- integral form]
+\begin{equation}
+\begin{aligned}
+  \oint \mathbf{E} \cdot d\mathbf{A} &= \frac{Q_{\text{enc}}}{\varepsilon_0} \\
+  \oint \mathbf{B} \cdot d\mathbf{A} &= 0 \\
+  \oint \mathbf{E} \cdot d\mathbf{l} &= -\frac{d\Phi_B}{dt} \\
+  \oint \mathbf{B} \cdot d\mathbf{l} &= \mu_0 I_{\text{enc}} + \mu_0 \varepsilon_0 \frac{d\Phi_E}{dt}
+\end{aligned}
+\vspace{-0.5cm}
+\end{equation}
+\end{definition}
+
+\vspace{0.5cm}
+The \textsf{conservation of charge} is given by,
+\begin{equation}
+  \frac{\partial \rho}{\partial t} + \nabla \cdot \mathbf{J} = 0, 
+\end{equation}
+and the \textsf{Lorentz force law} is
+\begin{equation}
+  \mathbf{F} = q(\mathbf{E} + \mathbf{v} \times \mathbf{B}).
+\end{equation}
+
+Maxwell unified electricity, magnetism and optics, showing that light is a wave. 
+\begin{Note}[Speed of light]
+  \begin{equation}
+    c = \frac{1}{\sqrt{\varepsilon_0 \mu_0}} = 299,792,458 \, \text{m/s}
+  \end{equation}
+\end{Note}\vspace{0.5cm}
+
+Electromagnetism is the basis for all of chemistry and biology, and is the foundation of all of modern technology. Einsten postulated that light is quantized, speed of light is constant, and that the laws of physics are the same in all inertial frames.\\
+
+At very high energies the \textsf{weak nuclear force} and the \textsf{electromagnetic force} are unified into the \textsf{electroweak force}. At even higher energies, the \textsf{strong nuclear force} is unified with the electroweak force into the \textsf{grand unified force (GUT)}.
+\begin{center}
+\begin{tikzpicture}
+  \draw[->] (0,0) -- (8,0) node[right] {Energy scale in $M_\text{proton}$};
+  \draw[->] (0,0) -- (0,4) node[above] {Force strength};
+  \draw[PineGreen] (0,0) -- (4,1)
+  \draw[PineGreen] (3,0.3) node[east] {Weak};
+  \draw[orange] (0,1) -- (4,1)
+  \draw[orange] (2,1) node[above] {Electromagnetism};
+  \draw[red] (4,1) -- (6,3)
+  \draw[red] (6,1.45) node[east] {Electroweak};
+  \draw[blue] (0, 3.75) -- (6,3)
+  \draw[blue] (3,3.5) node[above] {Strong};
+  \draw[gray] (6,3) -- (7, 2)
+  \draw[dashed] (6,0) -- (6, 3.5)
+  \draw[dashed] (4, 0) -- (4, 1.5)
+  \draw[dashed] (4.5, 0) -- (4.5, 1.95)
+  \draw (4.5, 1.95) node[above] {1000};
+  \draw (4, 1.5) node[above] {100};
+  \draw (6, 3.5) node[above] {GUT $10^{16}$};
+  \draw (7, 2) node[right] {TOE $10^{19}$};
+\end{tikzpicture}
+\end{center}

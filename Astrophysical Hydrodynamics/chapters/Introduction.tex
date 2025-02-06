@@ -1,3 +1,105 @@
 \chapternotnumbered{Introduction} \label{ch:Introduction}
+\section*{Interstellar Medium}
+Components of the interstellar medium (ISM) are 
+\begin{itemize}
+  \item \textsf{Cold neutral medium (CNM)} -- $T \sim 70$ K
+  \item \textsf{Warm neutral medium (WNM)} -- $T \sim 8000$ K
+  \item \textsf{HII regions} -- photoionized gas
+  \item \textsf{Warm ionized medium (WIM)} -- photoionized gas
+  \item \textsf{Hot intercloud medium (HIM)} -- collisionally ionized gas
+  \item \textsf{Molecular gas} -- mostly in molecular clouds
+\end{itemize} 
 
-agjhgsjhgsjhg
+\begin{table}[h]
+    \centering
+    \begin{tabular}{lcccccc}
+        \toprule
+        Property & CNM & WNM & HII reg & WIM & HIM & Mol \\
+        \midrule
+        Density (cm$^{-3}$) & 30 & 0.3 & $10 - 10^4$ & 0.1 & $10^{-3}$ & $> 10^2$ \\
+        Temperature (K) & $30 - 120$ & 8000 & \multicolumn{2}{c}{$\approx 10^4$} & $> 10^6$ & $\sim 10$ \\
+          Thermal speed (km s$^{-1}$) & $\sim 1$ & 8 & \multicolumn{2}{c}{$\sim 10$} & $> 100$ & $\sim 0.1$ \\
+          Observed speed (km s$^{-1}$) & few$-$10 & $8 - 15$ & \multicolumn{2}{c}{$15 - 25$} & - & $\sim 1$ \\
+        Total Mass ($10^9 M_\odot$) & 2 & 2 & 0.1 & 1 & $< 0.1$ & 1 \\
+        Scale-height (kpc) & 0.1 & $0.2 - 0.3$ & - & 1 & 3 & 0.06 \\
+        Maximum Radius (kpc) & $\lesssim 25$ & 25 & $\sim 15$ & - & - & $\sim 10$ \\
+        Filling factor & 0.01 & 0.25 & 0.02 & 0.25 & $\approx 0.5$ & 0.001 \\
+        Main observables & \multicolumn{2}{c}{21-cm} & \multicolumn{2}{c}{recomb/forbid} & X-rays & CO \\
+        \bottomrule
+    \end{tabular}
+    \caption{Properties of different interstellar medium phases.}
+    \label{tab:ism_properties}
+\end{table}
+
+Cold neutral gas is made of clouds, 90\% H, 10\% He, and trace elements. The photoionized gas is mostly HII regions, and can be seen through emission of \textsf{recombination} ($\text{Ly}\alpha, \text{H}\alpha, \text{H}\beta$, ...), \textsf{forbidden lines} ([OII], [OIII], [NII], [SII], ...), and \textsf{bremsstrahlung}. Hot gas is collisionally ionized and emits X-rays. Hot gas extends to hunderds of kiloparsecs making it difficult to observe. 
+\\
+
+The thermal velocity is given by 
+\begin{equation}
+  v_{\text{th}} = \sqrt{\frac{kT}{m}} 
+\end{equation}\\
+
+A magnetic field can be detected by 
+\begin{itemize}
+  \item \textsf{Zeeman effect} -- splitting of spectral lines
+  \item \textsf{Synchrotron radiation} -- non-thermal radiation
+  \item \textsf{Faraday rotation} -- rotation of polarization angle
+  \item \textsf{Polarization of stellar light} 
+  \item \textsf{Dust polarization} 
+\end{itemize}
+
+The magnetic field is important for gas dynamics, cloud stability, and shocks.
+
+\section*{Equilibriums in Hydrodynamics}
+The medium can be divided into three phases:
+\begin{itemize}
+  \item \textsf{Cold phase} -- $T \lesssim 100$ K 
+  \item \textsf{Warm phase} -- $T \sim 10^4$ K 
+  \item \textsf{Hot phase} -- $T \gtrsim 10^6$ K
+\end{itemize}
+and the pressures are roughly equivalent in the three phases. \textsf{Thermal equilibrium} is only a \hyellow{reasonable approximation locally}, not globally for the ISM. This is contrasted by the \textsf{pressure equilibrium} which is often \hyellow{fulfilled globally} in the ISM.\\
+\textsf{Hydrostatic equilibrium} is the balance between the pressure and gravitational force. It is important for molecular clouds, galaxy discs, hot halos, stars, ...\\
+
+\section*{Collisional Processes}
+In ideal fluids there are two types of collisions, \textsf{elastic} (change in $\mathbf{v}_p$, and energy is conserved), and \textsf{inelastic collisions} (with the transfer of energy). The mean free path is the average distance between collisions, 
+\begin{Note}[Mean free path]
+\begin{equation}
+  \ell = \frac{1}{\eqnmarkbox[blue]{n}{n} \eqnmarkbox[red]{sigma}{\sigma}},
+\end{equation}
+\annotate[yshift=-0.5em]{below, left}{n}{Number density}
+\annotate[yshift=-0.5em]{below}{sigma}{Cross-section}
+\vspace{5mm}
+\end{Note}
+and the \textsf{average time between collisions} is 
+\begin{equation}
+  \tau = \frac{\ell}{v_{\text{th}}} = \frac{1}{n\sigma v_{\text{th}}} \sim 10^4 \left(\frac{n}{\si{cm^{-3}}}\right)^{-1}\si{s} \text{ \hspace{0.3cm}  (\textsf{WIM})}. 
+\end{equation} 
+The shortest inelastic collision in WIM is the ionization of $\text{O}^+$ to OII, and the excitation time is, 
+\begin{equation}
+  \tau_{\text{exc}}(\text{O}^+) \sim 10^{11} \left(\frac{n_{\text{O}^+}/ n_e}{10^{-3}}\right)^{-1}\si{s}.
+\end{equation}
+\newpage
+In CNM, the average collision time is $\sim 10^8\, \text{s}$, mostly due to the C$^+$. The velocities as distributed as a \textsf{Maxwellian distribution},
+\begin{definition}[Maxwellian distribution]
+\begin{equation}
+  f(v)\,dv = 4\pi \left(\frac{m}{2\pi kT}\right)^{3/2} v^2 \exp\left(-\frac{mv^2}{2kT}\right)\,dv. 
+\end{equation}
+\vspace{-0.5cm}
+\end{definition}
+Using the distribution, the following characteristing speeds can be derived,
+\begin{Note}[Peak velocity]
+\begin{equation}
+  v_{\text{peak}} = \sqrt{\frac{2kT}{m}},
+\end{equation}
+\end{Note}
+\begin{Note}[RMS velocity]
+\begin{equation}
+  v_{\text{rms}} = \sqrt{\frac{3kT}{m}}. 
+\end{equation}
+\end{Note}
+\begin{Note}[Mean velocity]
+\begin{equation}
+  \langle v \rangle = \int_0^\infty v f(v)\,dv =  \sqrt{\frac{8kT}{\pi m}},
+\end{equation}
+\end{Note}
+
