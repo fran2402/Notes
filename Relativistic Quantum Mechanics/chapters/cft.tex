@@ -209,7 +209,7 @@ Since relativity has to be accounted for, the field theory has to be invariant u
 \end{equation}
 where, 
 \begin{lemma}[Lorentz tranformation]
-  \begin{equation}
+  \begin{equation}\label{eq:lorentz}
     \Lambda\indices{^\mu_\sigma}\eta^{\sigma\tau}\Lambda\indices{^\nu_\tau} = \eta^{\mu\nu}.
   \end{equation}
   \vspace{-0.5cm}
@@ -282,4 +282,98 @@ The action is then Lorentz invariant, however there is no Jacobian factor in the
 Since the Lagrangian is linear in time derivative, but quadratic in spatial derivatives, the theory is \hyellow{not Lorentz invariant}.
 
 \section{Symmetries}
+\subsection{Noeter's theorem}
+For every continous symmetry of the Lagrangian, there is a conserved current, such that, 
+\begin{equation}
+  \partial_\mu j^\mu = 0. 
+\end{equation}
+For example, a transformation $\delta\phi_a(x) = X_a(\phi(x))$ is a symmetry if the Lagrangian changes by a total derivative, $\delta\mathcal{L} = \partial_\mu F^\mu$.\begin{equation}
+  \begin{align}
+    \delta\mathcal{L} &= \left(\frac{\partial\mathcal{L}}{\partial\phi_a}-\partial_\mu\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi_a)}\right)\delta\phi_a + \partial_\mu\left(\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi_a)}\delta\phi_a\right)\\
+    &= \partial_\mu\left(\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi_a)}\delta\phi_a\right)\\
+    \Rightarrow \quad j^\mu &= \frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi_a)}X_a - F^\mu.
+  \end{align}
+\end{equation}
+\subsection{Translation invariance}
+In classical particle mechanics, invariance in spatial translations leads to momentum conservation, while invariance in time translations leads to energy conservation. Consider the infinitesimal translation, 
+\begin{equation}
+  x^\mu \rightarrow x^\mu + \varepsilon^\mu \quad \Rightarrow \quad \phi(x)_a \rightarrow \phi(x)_a + \varepsilon^\mu\partial_\mu\phi(x)_a,
+\end{equation}
+making the Lagrangian transform as, 
+\begin{equation}
+  \mathcal{L} \rightarrow \mathcal{L} + \varepsilon^\mu\partial_\mu\mathcal{L}
+\end{equation}
+and the conserved current is,
+\begin{equation}
+  (j^\mu)_\nu = \frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi_a)}\partial_\nu\phi_a - \delta^\mu_\nu\mathcal{L} \overset{\text{def}}{=} \eqnmarkbox[red]{emtensor}{T\indices{^\mu_\nu}}.
+\end{equation}
+\annotate[yshift=1em]{above}{emtensor}{Energy momentum tensor, $\partial_\mu T\indices{^\mu_\nu} = 0$}\\
 
+\vspace{-8mm}
+The \textsf{energy momentum tensor} satisfies,
+\begin{equation}
+  \eqnmarkbox[red]{totE}{E} = \int d^3 x\, T^{00}, \quad \eqnmarkbox[blue]{totP}{P^i} = \int d^3 x\, T^{0i}. 
+\end{equation}
+\annotate[yshift=-0.5em]{below, left}{totE}{Total energy}
+\annotate[yshift=-0.5em]{below, right}{totP}{Total momentum}
+
+\subsubsection{Klein-Gordon equation}
+The energy momentum tensor for the Klein-Gordon equation is, 
+\begin{derivation}
+  \begin{equation}
+    \begin{aligned}
+      T\indices{^\mu_\nu} &= \frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi_a)}\partial_\nu\phi_a - \delta^\mu_\nu\mathcal{L}\\
+                          &= \partial^\mu\phi\partial_\nu\phi - \delta^\mu_\nu\mathcal{L}\\
+      \text{$\cdot /$ $\eta^{\sigma\nu}$}\quad T^{\mu\nu} &= \partial^\mu\phi\partial^\nu\phi - \eta^{\mu\nu}\mathcal{L}.
+    \end{aligned}
+  \end{equation}
+\end{derivation}
+
+\subsection{Lorenty transformations and angular momentum}
+The infinitesimal form of the Lorentz transformation is,
+\begin{equation}
+  \Lambda\indices{^\mu_\nu} = \delta\indices{^\mu_\nu} + \eqnmarkbox[red]{infinitesimal}{\omega\indices{^\mu_\nu}},
+\end{equation}
+\annotate[yshift=-0.5em]{below}{infinitesimal}{Infinitesimal Lorentz transformation}\\
+From equation \eqref{eq:lorentz}, the infinitesimal Lorentz transformation satisfies,
+\begin{equation}
+  \begin{aligned}
+    (\delta\indices{^\mu_\sigma} + \omega\indices{^\mu_\sigma})\eta^{\sigma\rho}(\delta\indices{^\nu_\rho} + \omega\indices{^\nu_\rho}) &= \eta^{\mu\nu}\\
+    \Rightarrow \quad \omega^{\mu\nu} + \omega^{\nu\mu} &= 0,
+  \end{aligned}
+\end{equation}
+showing that $\omega^{\mu\nu}$ is antisymmetric. The scalar field transformation is then, 
+\begin{equation}
+  \phi(x) \rightarrow \phi(\Lambda^{-1}x) = \phi(x^\mu - \omega\indices{^\mu_\nu} x^\nu) = \phi(x^\mu) - \omega\indices{^\mu_\nu}x^\nu\partial_\mu\phi(x) = \phi(x^\mu) +\delta\phi(x).
+\end{equation}
+The Lagrangian tranforms as,
+\begin{equation}
+  \delta\mathcal{L} = -\omega\indices{^\mu_\nu}x^\nu\partial_\mu\mathcal{L} = -\partial_\mu(\omega\indices{^\mu_\nu}x^\nu\mathcal{L}),
+\end{equation}
+and applying Noether's theorem, the conserved current is, 
+\begin{equation}
+  j^\mu = -\omega\indices{^\rho_\nu} T\indices{^\mu_\rho}x^\nu.
+\end{equation}
+For each of the six choices for $\omega\indices{^\mu_\nu}$, the conserved current can be rewritten as, 
+\begin{definition}[Lorentz transformation conserved current]
+  \begin{equation}
+    (\mathcal{J}^\mu)^{\rho\sigma} = x^\rho T^{\mu\sigma} - x^\sigma T^{\mu\rho}. 
+  \end{equation}
+  \vspace{-0.5cm}
+\end{definition}
+\section{Hamiltonian formalism}
+The momentum conjugate to the field is defined as,
+\begin{definition}
+  \begin{equation}
+    \pi^a(x) = \frac{\partial\mathcal{L}}{\partial \dot \phi_a}.
+  \end{equation}
+  \vspace{-0.5cm}
+\end{definition}
+The Hamiltonian is then, 
+\begin{definition}
+  \begin{equation}
+    \mathcal{H} = \pi^a\dot\phi_a - \mathcal{L} \quad H = \int d^3x\, \mathcal{H}. 
+  \end{equation}
+  \vspace{-0.5cm}
+\end{definition}
+Unlinke the Lagrangian formalism, the Hamiltonian is \hyellow{not manifestly Lorentz invariant}. 

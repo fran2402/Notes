@@ -64,3 +64,119 @@ which is the \textsf{continuity equation} or the \textsf{mass conservation equat
   \frac{\text{D}\rho}{\text{D}t} + \rho\nabla\cdot\mathbf{u} = 0. 
 \end{equation}
 For an \textsf{incompressible fluid}, $\nabla\cdot\mathbf{u} = 0 \Leftrightarrow \text{D}\rho/\text{D}t = 0$.
+
+\section{Euler equation}
+Consider an infinitesimal fluid element, its mass would be, 
+\begin{equation}
+  m = \rho\delta V 
+\end{equation}
+and the acceleration is, 
+\begin{equation}
+  \mathbf{a} = \frac{\text{D}\mathbf{v}}{\text{D}t}.
+\end{equation}
+The two forces acting on the fluid element are the pressure force and the gravitational force. The pressure force is, 
+\begin{equation}
+  \mathbf{F}_P = - \int_S P\, d\mathbf{S} = -\int_V \nabla P\, dV, 
+\end{equation}
+which then for an infinitesimal volume becomes,
+\begin{equation}
+  \mathbf{F}_P = -\nabla P\delta V. 
+\end{equation}
+The gravitational force for an infinitesimal volume is, 
+\begin{equation}
+  m\mathbf{g} = \rho\delta V\eqnmarkbox[red]{grav}{\mathbf{g}}. 
+\end{equation}
+\annotate[yshift=-0.5em]{below}{grav}{$\mathbg{g} = -\nabla\Phi$} 
+\hspace{-5.5mm} Bringing everything together,
+\begin{definition}[Euler equation]
+\begin{equation}
+  \rho\frac{\text{D}\mathbf{u}}{\text{D}t} = -\nabla P - \rho\nabla\Phi \quad\quad \frac{\partial\mathbf{u}}{\partial t} + (\mathbf{u}\cdot\nabla)\mathbf{u} = -\frac{1}{\rho}\nabla P - \nabla\Phi. 
+\end{equation}
+\vspace{-5mm}
+\end{definition} 
+
+Currently we have 6 unknowns, $\rho, \mathbf{u}, P, \Phi$, and 3 equations, the continuity equation, the Euler equation, and the Poisson equation,
+\begin{definition}[Poisson equation]
+\begin{equation}
+  \nabla^2\Phi = 4\pi G(\rho + \rho_\text{ext}). 
+\end{equation}
+\vspace{-5mm}
+\end{definition}
+
+\section{Equation of state}
+The equation of state is a relation between the pressure, density, and temperature of a fluid. For an ideal gas, 
+\begin{equation}
+  P = \frac{\rho k T}{\eqnmarkbox[red]{atmweight}{\mu} \eqnmarkbox[blue]{proton}{m_p}}, 
+\end{equation}
+\annotate[yshift=-0.5em]{below, left}{atmweight}{Atomic weight}
+\annotate[yshift=-0.5em]{below, right}{proton}{Proton mass}\\
+
+
+A gas can be assumed to be \textsf{baroclinic}, $P = P(\rho, T)$, or \textsf{barotropic}, $P = P(\rho)$. Typical situations are \textsf{isotropic fluids}, $P\propto\rho$, and \textsf{adiabatic fluids}, $P\propto\rho^\gamma$. 
+\section{Energy equation} 
+Firstly, the total energy density of a system is, 
+\begin{equation}
+  \varepsilon = \rho\left(\eqnmarkbox[red]{kinetic}{\frac{1}{2}\mathbf{u}^2} + \eqnmarkbox[blue]{specintern}{\mathcal{U}}+\eqnmarkbox[PineGreen]{grav}{\Phi}\right),
+\end{equation}
+\annotate[yshift=-0.5em]{below,left}{kinetic}{Kinetic energy density}
+\annotate[yshift=-0.5em]{below}{specintern}{Specific internal energy, $\mathcal{U} = U/M$}
+\annotate[yshift=1em]{above}{grav}{Gravitational potential energy density}\\
+
+Taking the derivative, 
+\begin{equation}
+  \frac{\text{D}\varepsilon}{\text{D}t} = \frac{\varepsilon}{\rho}\frac{\text{D}\rho}{\text{D} t} + \rho\frac{\text{D}}{\text{D}t}\left(\frac{1}{2}\mathbf{u}^2 + \mathcal{U} + \Phi\right). 
+\end{equation}
+The derivative of the spefic kinetic energy is,
+\begin{equation}
+\frac{\text{D}}{\text{D}t}\left(\frac{1}{2}\mathbf{u}^2\right) = \mathbf{u}\cdot\frac{\text{D}\mathbf{u}}{\text{D}t} = -\frac{\mathbf{u}}{\rho}\cdot\nabla P - \mathbf{u}\cdot\nabla\Phi.
+\end{equation} 
+Using the first law of thermodynamics,
+\begin{equation}
+  d\mathcal{U} + P\,d\mathcal{V} = \delta Q,
+\end{equation}
+and taking the derivative, 
+\begin{equation}
+  \frac{\text{D}\mathcal{U}}{\text{D}t} + P\frac{\text{D}\mathcal{V}}{\text{D}t} = \dot Q.
+\end{equation}
+The specific volume is $\mathcal{V} = 1/\rho$, so the derivative is, 
+\begin{equation}
+  \frac{\text{D}\mathcal{V}}{\text{D}t} = -\frac{1}{\rho^2}\frac{\text{D}\rho}{\text{D}t} = \frac{1}{\rho}\nabla\cdot\mathbf{u}. 
+\end{equation}
+The derivative of the gravitational potential energy is,
+\begin{equation}
+  \frac{\text{D}\Phi}{\text{D}t} = \mathbf{u}\cdot\nabla\Phi + \frac{\partial\Phi}{\partial t}. 
+\end{equation} 
+Putting everything together,
+\begin{definition}[Conservation of energy density]
+\begin{equation}
+  \begin{aligned}
+    \frac{\text{D}\varepsilon}{\text{D}t} &= -\varepsilon\nabla\cdot\mathbf{u} - \mathbf{u}\cdot\nabla P - P\nabla\cdot\mathbf{u} + \rho\dot Q + \rho\eqnmarkbox[red]{excl}{\frac{\partial\Phi}{\partial t}},\\
+    \frac{\partial \varepsilon}{\partial t} + \nabla\cdot((\varepsilon + P)\mathbf{u}) &= \rho\dot Q.
+  \end{aligned}
+\end{equation}
+\annotate[yshift=-0.5em]{below, left}{excl}{Excluded as being negligible}
+\vspace{-5mm}
+\end{definition}
+The physical meaning of this equation can be unveiled by integrating the equation, using the divergence theorem,
+\begin{equation}
+  \frac{\partial}{\partial t}\int_V \varepsilon\,dV + \eqnmarkbox[blue]{flux}{\oint_S \varepsilon\mathbf{u}\cdot d\mathbf{S}} + \eqnmarkbox[red]{workdone}{\oint_S P\mathbf{u}\cdot d\mathbf{S}} = \int_V \rho\dot Q\,dV. 
+\end{equation}
+\annotate[yshift=-0.5em]{below}{workdone}{Work done by the fluid $dW/dt$}
+\annotate[yshift=-0.5em]{below, left}{flux}{Energy flux}\\
+
+\section{Heat exchange}
+\subsection{Conduction}
+Thermal conduction is the transfer of heat from a region of high temperature to a region of low temperature. Mathematically it can be assumed that the flux of thermal conduction is linearly dependent on the temperature gradient, 
+\begin{equation}
+  \begin{aligned}
+    \mathbf{q} &= -\kappa\nabla T,\\
+               &= -\kappa_\text{Sp} T^{5/2}\nabla T. 
+  \end{aligned}
+\end{equation}
+If there is a magnetic field present, the \textsf{supression factor $f$} has to be taken into account, and is inserted in the beginning of the formula. It is usually between $0.01-0,2$, making it a non-negligible factor.\\
+Putting everything into the energy equation,
+\begin{equation}
+  \frac{\partial \varepsilon}{\partial t} + \nabla\cdot((\varepsilon + P)\mathbf{u}) = \rho \dot Q - \nabla\cdot\mathbf{q}. 
+\end{equation}
+
+\subsection{Convection}

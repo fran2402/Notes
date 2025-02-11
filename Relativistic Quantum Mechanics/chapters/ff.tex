@@ -1,0 +1,52 @@
+\chapter{Free Fields}
+\section{Canonical quantization}
+Take the generalized coordinates $q_a$ and their conjugate momenta $p_a$ and promote them to operators $\hat{q}_a$ and $\hat{p}_a$ that satisfy the canonical commutation relations
+\begin{equation}
+[\hat{q}_a,\hat{p}^b]=i\delta_{ab} \quad \text{and} \quad [\hat{q}_a,\hat{q}_b]=[\hat{p}^a,\hat{p}^b]=0. 
+\end{equation}
+In field theories this transforms into the commutation relations
+\begin{definition}
+\begin{equation}
+  [\phi_a(\mathbf{x}),\pi^b(\mathbf{y})]=i\delta^{(3)}(\mathbf{x}-\mathbf{y})\delta^b_a \quad \text{and} \quad [\phi_a(\mathbf{x}),\phi_b(\mathbf{y})]=[\pi^a(\mathbf{x}),\pi^b(\mathbf{y})]=0. 
+\end{equation}
+\vspace{-5mm}
+\end{definition}
+
+Free field theories typically have Lagrangians which are quadratic in the fields, so that the equations of motion are linear. To decouple the degrees of freedom, a Fourier tranform is done, 
+\begin{equation}
+  \phi(\mathbf{x},t)=\int \frac{d^3p}{(2\pi)^3}e^{i\mathbf{p}\cdot\mathbf{x}}\phi(\mathbf{p},t) \quad \left(\frac{\partial^2}{\partial t^2}+(\mathbf{p}^2+m^2)\right)\phi(\mathbf{p},t)=0, 
+\end{equation}
+so for each value of $\mathbf{p}$ we have a harmonic oscillator vibrating at a frequency $\omega_{\mathbf{p}}=\sqrt{\mathbf{p}^2+m^2}$. To quantize the field, an infinite number of harmonic oscillators need to be quantized. 
+\subsection{Simple harmonic oscillator}
+The Hamiltonian for a simple harmonic oscillator is
+\begin{equation}
+  H=\frac{1}{2}p^2+\frac{1}{2}\omega^2q^2,
+\end{equation}
+and the creation and annihilation operators are defined as
+\begin{equation}
+  \begin{aligned}
+    a&=\sqrt{\frac{\omega}{2}}q+i\sqrt{\frac{1}{2\omega}}p, &\quad a^\dagger&=\sqrt{\frac{\omega}{2}}q-i\sqrt{\frac{1}{2\omega}}p\\
+    q&=\sqrt{\frac{1}{2\omega}}(a+a^\dagger), &\quad p&=-i\sqrt{\frac{\omega}{2}}(a-a^\dagger). 
+  \end{aligned}
+\end{equation}
+The commutation relations are 
+\begin{equation}
+  [a,a^\dagger]=1 \quad \text{and} \quad [q,p]=i,
+\end{equation}
+allowing us to write the Hamiltonian as 
+\begin{equation}
+  H=\omega\left(a^\dagger a+\frac{1}{2}\right). 
+\end{equation}
+The commutation relations between the Hamiltonian and the creation and annihilation operators are
+\begin{equation}
+  [H,a]=-\omega a \quad \text{and} \quad [H,a^\dagger]=\omega a^\dagger. 
+\end{equation}
+
+\section{Free scalar field}
+We now apply the quantization of the harmonic oscillator to the free scalar field. We write $\phi$ and $\pi$ as a linear sum of an infinite number of creation and annihilation operators, 
+\begin{equation}
+  \begin{aligned}
+    \phi(\mathbf{x})&=\int \frac{d^3p}{(2\pi)^3}\frac{1}{\sqrt{2\omega_{\mathbf{p}}}}\left(a_{\mathbf{p}}e^{i\mathbf{p}\cdot\mathbf{x}}+a_{\mathbf{p}}^\dagger e^{-i\mathbf{p}\cdot\mathbf{x}}\right),\\
+    \pi(\mathbf{x})&=\int \frac{d^3p}{(2\pi)^3}(-i)\sqrt{\frac{\omega_{\mathbf{p}}}{2}}\left(a_{\mathbf{p}}e^{i\mathbf{p}\cdot\mathbf{x}}-a_{\mathbf{p}}^\dagger e^{-i\mathbf{p}\cdot\mathbf{x}}\right). 
+  \end{aligned}
+\end{equation}
